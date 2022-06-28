@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+}
+
+.background-forest {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    opacity: .8;
+}
+
+/* PERSONAGENS */
+.harry-potter {
+    position: absolute;
+    width: 250px;
+    bottom: 65px;
+}
+
+.harry-jump {
+    animation: harry-jump 1s ease-out;
+}
+
+.voldemort {
+    position: absolute;
+    width: 200px;
+    bottom: 65px;
+    animation: voldemort-running 10s infinite linear;
+}
+
+
+/* ANIMAÇÕES */
+@keyframes harry-jump {
+    0% {
+        bottom: 65px;
+    }
+    50% {
+        bottom: 400px;
+    }
+    100% {
+        bottom: 65px;
+    }
+}
+
+@keyframes voldemort-running {
+    from {
+        right: -100px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
