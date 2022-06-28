@@ -3,10 +3,12 @@ const voldemort = document.querySelector(".voldemort");
 const dementor = document.querySelector(".dementor");
 
 // SONS
-const somTema = new Audio ();
-somTema.src = './sound/Theme.mp3';
-const somAvada = new Audio ();
-somAvada.src = './sound/Avada_Kedavra.mp3';
+// const somTema = new Audio ();
+// somTema.src = './sound/Theme.mp3';
+// const somAvada = new Audio ();
+// somAvada.src = './sound/Avada_Kedavra.mp3';
+
+// somTema.play();
 
 // PULO
 const jump = () => {

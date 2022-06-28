@@ -6,6 +6,7 @@
 
 body {
     background: #000;
+    overflow: hidden;
 }
 
 .background-forest {
@@ -15,14 +16,22 @@ body {
     opacity: .8;
 }
 
+.smoke {
+    position: absolute;
+    width: 100vw;
+    bottom: 70px;
+    opacity: .5;
+    animation: smoke 10s infinite alternate;
+}
 /* PERSONAGENS */
 .harry-potter {
     position: absolute;
     width: 250px;
     bottom: 65px;
+    left: 50px;
 }
 
-.harry-jump {
+.jump-harry {
     animation: harry-jump 1s ease-out;
 }
 
@@ -30,9 +39,15 @@ body {
     position: absolute;
     width: 200px;
     bottom: 65px;
-    animation: voldemort-running 10s infinite linear;
+    animation: voldemort-running 6.5s infinite linear;
 }
 
+.dementor {
+    position: absolute;
+    width: 150px;
+    bottom: 75px;
+    animation: voldemort-running 13s infinite linear;
+}
 
 /* ANIMAÇÕES */
 @keyframes harry-jump {
@@ -49,10 +64,18 @@ body {
 
 @keyframes voldemort-running {
     from {
-        right: -100px;
+        right: -250px;
     }
     to {
         right: 100%;
     }
 }
 
+@keyframes smoke {
+    from {
+        bottom: 300px;
+    }
+    to {
+        bottom: 70px;
+    }
+}
