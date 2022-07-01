@@ -5,12 +5,10 @@ const pontuacao = document.querySelector("#label-pontos");
 let pontos = 0;
 
 // SONS
-// const somTema = new Audio ();
-// somTema.src = './sound/Theme.mp3';
-// const somAvada = new Audio ();
-// somAvada.src = './sound/Avada_Kedavra.mp3';
-
-// somTema.play();
+const somTema = new Audio ();
+somTema.src = './sound/Theme.mp3';
+const somGameOver = new Audio ();
+somGameOver.src = './sound/GameOver.mp3';
 
 // PULO
 const jump = () => {
@@ -20,13 +18,14 @@ const jump = () => {
   }, 1000);
 };
 
-
 // PRINCIPAL - JOGO
 
 function loadTela() {
 
+  somTema.play();
+
   document.querySelector(".voldemort").removeAttribute('hidden');
-  voldemort.style.animation = 'voldemort-running 4s infinite linear';
+  voldemort.style.animation = 'voldemort-running 3s infinite linear';
 
   const loopGame = setInterval(() => {
     const voldemortPosition = voldemort.offsetLeft;
@@ -50,6 +49,9 @@ function loadTela() {
       harry.style.marginLeft = "65px";
       harry.style.marginBottom = "75px";
       harry.style.animation = "harry-game-over 3s infinite";
+
+      somTema.pause();
+      somGameOver.play();
 
       clearInterval(loopGame);
       clearInterval(score);
