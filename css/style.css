@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +25,88 @@ body {
     opacity: .5;
     animation: smoke 10s infinite alternate;
 }
+
+/* START */
+.startbuttom {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.startbuttom img {
+    width: 500px;
+    position: absolute;
+    margin-top: 300px;
+    z-index: 1;
+    transition: .5s ease-in-out;
+}
+
+.startbuttom img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+}
+
+.startbuttom p {
+    position: absolute;
+    font-family: 'Lekton', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 550px;
+    z-index: 1;
+}
+
+/* GAME OVER */
+.gameover {
+    display: none;
+    justify-content: center;
+    color: #fff;
+}
+
+.gameover img {
+    position: absolute;
+    width: 300px;
+    margin-top: 300px;
+}
+
+.gameover button {
+    position: absolute;
+    margin-top: 550px;
+    cursor: pointer;
+    padding: 20px 50px;
+    border-radius: 8px;
+    background-color: rgb(173, 21, 21);
+    border: 2px dashed #000;
+    font-family: 'Lekton', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    transition: .3s ease-in-out;
+}
+
+.gameover button:hover {
+    background-color: rgb(110, 11, 11);
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+
+/* PONTUAÇÃO */
+.score {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    width: 200px;
+    color: #fff;
+    padding: 3px;
+    font-family: 'Lekton', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+#label-pontos {
+    color: #ffffff;
+}
+
 /* PERSONAGENS */
 .harry-potter {
     position: absolute;
@@ -32,7 +116,7 @@ body {
 }
 
 .jump-harry {
-    animation: harry-jump 1s ease-out;
+    animation: harry-jump 1.5s ease-out;
 }
 
 .voldemort {
@@ -42,21 +126,19 @@ body {
     animation: voldemort-running 6.5s infinite linear;
 }
 
-.dementor {
-    position: absolute;
-    width: 150px;
-    bottom: 75px;
-    animation: voldemort-running 13s infinite linear;
-}
+
+
 
 /* ANIMAÇÕES */
 @keyframes harry-jump {
     0% {
         bottom: 65px;
     }
+
     50% {
         bottom: 400px;
     }
+
     100% {
         bottom: 65px;
     }
@@ -66,6 +148,7 @@ body {
     from {
         right: -250px;
     }
+
     to {
         right: 100%;
     }
@@ -73,8 +156,9 @@ body {
 
 @keyframes smoke {
     from {
-        bottom: 300px;
+        bottom: 150px;
     }
+
     to {
         bottom: 70px;
     }

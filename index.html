@@ -10,14 +10,30 @@
 </head>
 
 <body>
+
+    <!-- START -->
+    <div class="startbuttom">
+        <img src="./img/Start-Button.png" alt="" onclick="telaInicial()">
+        <p>Pressione qualquer tecla para pular sobre Aquele-Que-Não-Deve-Ser-Nomeado</p>
+    </div>
+
     <!-- ELEMENTOS DO CENÁRIO -->
     <img src="./img/forest.jpg" class="background-forest" alt="">
     <img src="./img/black-smoke-png.png" class="smoke" alt="">
     <img src="./img/smoke.png" class="smoke" alt="">
     <img src="./img/harry-potter-running.gif" class="harry-potter" alt="">
     <img src="./img/voldemort.png" class="voldemort" alt="">
-    <img src="./img/dementor.png" class="dementor" alt="">
 
+    <!-- PONTUAÇÃO -->
+    <div class="score" hidden>
+        <h3>Pontos: <span id="label-pontos"></span></h3>
+    </div>
+
+    <!-- GAME OVER -->
+    <div class="gameover">
+        <img src="./img/game-over.png" alt="">
+        <button onclick="document.location.reload()">Tentar novamente</button>
+    </div>
 
     <!-- SCRIPT -->
     <script src="./js/script.js"></script>
