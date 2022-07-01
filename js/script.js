@@ -24,39 +24,40 @@ const jump = () => {
 // PRINCIPAL - JOGO
 
 function loadTela() {
-  //sumir tela start e inicar jogo
+
+  document.querySelector(".voldemort").removeAttribute('hidden');
+  voldemort.style.animation = 'voldemort-running 4s infinite linear';
+
   const loopGame = setInterval(() => {
     const voldemortPosition = voldemort.offsetLeft;
     const harryPosition = +window.getComputedStyle(harry).bottom.replace("px", "");
 
     pontuacao.textContent = pontos;
 
-    if (voldemortPosition <= 150 && voldemortPosition > 0 && harryPosition < 80) {
+    console.log(voldemortPosition);
+    console.log(harryPosition);
+
+    if (voldemortPosition <= 240 && voldemortPosition > 0 && harryPosition < 80) {
       voldemort.style.animation = "none";
       voldemort.style.left = `${voldemortPosition}px`;
 
       harry.style.animation = "none";
       harry.style.bottom = `${harryPosition}px`;
 
-      harry.src = "./img/explosion-pixel.gif";
-      harry.style.width = "100px";
-      harry.style.marginLeft = "45px";
+      voldemort.style.filter = "drop-shadow(0px 0px 15px red)";
+      harry.src = "./img/harry-potter-game-over.png";
+      harry.style.width = "150px";
+      harry.style.marginLeft = "65px";
       harry.style.marginBottom = "75px";
-
-      setTimeout( () => {
-        telaGameOver();
-      },1000);
+      harry.style.animation = "harry-game-over 3s infinite";
 
       clearInterval(loopGame);
       clearInterval(score);
 
       document.querySelector('.gameover').style.display = 'flex';
-      //carregar tela GAME OVER
     }
   }, 10);
 }
-
-
 
 // BOTÃO START
 function telaInicial () {
