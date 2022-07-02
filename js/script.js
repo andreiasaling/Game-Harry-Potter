@@ -19,7 +19,6 @@ const jump = () => {
 };
 
 // PRINCIPAL - JOGO
-
 function loadTela() {
 
   somTema.play();
